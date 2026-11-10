@@ -1,66 +1,51 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>CREST: Deployment-Realistic Hardware-in-the-Loop NAS for Embedded Sensing Systems</title>
-  <meta name="title" content="CREST: Deployment-Realistic Hardware-in-the-Loop NAS for Embedded Sensing Systems">
-  <meta name="description" content="CREST is a hardware-in-the-loop NAS framework for deployment-realistic TinyML on resource-constrained microcontrollers.">
-  <meta name="keywords" content="CREST, TinyML, hardware-in-the-loop, neural architecture search, embedded sensing, microcontrollers, energy measurement, deployment-realistic NAS">
-  <meta name="author" content="Joseph Q. Zales, Pragya Sharma, Mani Srivastava">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="UCLA Networked & Embedded Systems Laboratory">
-  <meta property="og:title" content="CREST: Deployment-Realistic Hardware-in-the-Loop NAS for Embedded Sensing Systems">
-  <meta property="og:description" content="A hardware-in-the-loop NAS framework for deployment-realistic TinyML on resource-constrained microcontrollers.">
-  <meta property="og:url" content="https://joseph-q-zales.github.io/crest-site/">
-  <meta property="og:image" content="https://joseph-q-zales.github.io/crest-site/static/images/crest-stack.png">
-  <meta property="og:image:alt" content="CREST framework structure">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="CREST: Deployment-Realistic Hardware-in-the-Loop NAS for Embedded Sensing Systems">
-  <meta name="twitter:description" content="A hardware-in-the-loop NAS framework for deployment-realistic TinyML on resource-constrained microcontrollers.">
-  <meta name="twitter:image" content="https://joseph-q-zales.github.io/crest-site/static/images/crest-stack.png">
-  <meta name="twitter:image:alt" content="CREST framework structure">
-
-  <meta name="citation_title" content="CREST: Deployment-Realistic Hardware-in-the-Loop NAS for Embedded Sensing Systems">
-  <meta name="citation_author" content="Zales, Joseph Q.">
-  <meta name="citation_author" content="Sharma, Pragya">
-  <meta name="citation_author" content="Srivastava, Mani">
-  <meta name="citation_publication_date" content="2027">
-  <meta name="citation_pdf_url" content="https://joseph-q-zales.github.io/crest-site/static/pdfs/crest_sensys_2027_draft.pdf">
-
-  <meta name="theme-color" content="#1f4f8f">
-  <meta name="msapplication-TileColor" content="#1f4f8f">
-
-  <link rel="icon" type="image/svg+xml" href="static/images/crest-favicon.svg?v=2">
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=2">
-  <link rel="icon" type="image/x-icon" href="static/images/crest-favicon.ico?v=2">
-  <link rel="apple-touch-icon" sizes="180x180" href="static/images/crest-apple-touch-icon.png?v=2">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-
-  <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>CREST | Hardware-in-the-loop experimentation for embedded model selection</title>
+<meta content="CREST | Hardware-in-the-loop experimentation for embedded model selection" name="title"/>
+<meta content="CREST is an open-source hardware-in-the-loop experimentation system for embedded model selection across workloads, targets, runtime schedules and candidate proposers." name="description"/>
+<meta content="CREST, TinyML, hardware-in-the-loop, neural architecture search, embedded sensing, microcontrollers, energy measurement, deployment-realistic NAS" name="keywords"/>
+<meta content="Joseph Q. Zales, Pragya Sharma, Mani Srivastava" name="author"/>
+<meta content="index, follow" name="robots"/>
+<meta content="English" name="language"/>
+<meta content="article" property="og:type"/>
+<meta content="UCLA Networked &amp; Embedded Systems Laboratory" property="og:site_name"/>
+<meta content="CREST | Hardware-in-the-loop experimentation for embedded model selection" property="og:title"/>
+<meta content="Reusable evaluation, measurement records and replay for embedded model selection." property="og:description"/>
+<meta content="https://joseph-q-zales.github.io/crest-site/" property="og:url"/>
+<meta content="https://joseph-q-zales.github.io/crest-site/static/images/crest-stack.png" property="og:image"/>
+<meta content="CREST framework structure" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="CREST | Hardware-in-the-loop experimentation for embedded model selection" name="twitter:title"/>
+<meta content="Reusable evaluation, measurement records and replay for embedded model selection." name="twitter:description"/>
+<meta content="https://joseph-q-zales.github.io/crest-site/static/images/crest-stack.png" name="twitter:image"/>
+<meta content="CREST framework structure" name="twitter:image:alt"/>
+<meta content="#1f4f8f" name="theme-color"/>
+<meta content="#1f4f8f" name="msapplication-TileColor"/>
+<link href="static/images/crest-favicon.svg?v=2" rel="icon" type="image/svg+xml"/>
+<link href="favicon.ico?v=2" rel="shortcut icon" type="image/x-icon"/>
+<link href="static/images/crest-favicon.ico?v=2" rel="icon" type="image/x-icon"/>
+<link href="static/images/crest-apple-touch-icon.png?v=2" rel="apple-touch-icon" sizes="180x180"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="static/css/bulma.min.css" rel="stylesheet"/>
+<link href="static/css/index.css?v=20261110-buttons" rel="stylesheet"/>
+<link as="style" href="static/css/fontawesome.all.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript>
+<link href="static/css/fontawesome.all.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet"/>
+</noscript>
+<script defer="" src="static/js/fontawesome.all.min.js"></script>
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "CREST: Deployment-Realistic Hardware-in-the-Loop NAS for Embedded Sensing Systems",
-    "description": "CREST is a hardware-in-the-loop NAS framework for deployment-realistic TinyML on resource-constrained microcontrollers.",
+    "@type": "SoftwareSourceCode",
+    "name": "CREST | Hardware-in-the-loop experimentation for embedded model selection",
+    "description": "CREST is an open-source hardware-in-the-loop experimentation system for embedded model selection across workloads, targets, runtime schedules and candidate proposers.",
     "author": [
       {"@type": "Person", "name": "Joseph Q. Zales", "affiliation": {"@type": "Organization", "name": "University of California, Los Angeles"}},
       {"@type": "Person", "name": "Pragya Sharma", "affiliation": {"@type": "Organization", "name": "University of California, Los Angeles"}},
@@ -73,583 +58,172 @@
     "url": "https://joseph-q-zales.github.io/crest-site/",
     "image": "https://joseph-q-zales.github.io/crest-site/static/images/crest-stack.png",
     "keywords": ["Neural architecture search", "TinyML", "hardware-in-the-loop", "embedded machine learning", "energy measurement"],
+    "codeRepository": "https://github.com/nesl/crest",
     "isAccessibleForFree": true
   }
   </script>
 </head>
 <body class="crest-page">
-  <main id="main-content">
-    <section class="hero is-large hero-white crest-hero">
-      <div class="hero-body">
-        <div class="container is-max-desktop has-text-centered">
-          <h1 class="title is-1 hero-title-dark">CREST</h1>
-          <h2 class="subtitle is-3 hero-subtitle-dark">Deployment-Realistic Hardware-in-the-Loop NAS for Embedded Sensing Systems</h2>
+<main id="main-content">
+<section class="hero is-large hero-white crest-hero" id="home">
+<div class="hero-body">
+<div class="container is-max-desktop has-text-centered">
+<h1 class="title is-1 hero-title-dark">CREST</h1>
+<h2 class="subtitle is-3 hero-subtitle-dark">Measure the Deployment, Not Just the Model: Rethinking Hardware-Aware Model Selection for Microcontrollers</h2>
+<div class="hero-meta">
+<p class="is-size-5">Joseph Q. Zales, Pragya Sharma, Mani Srivastava {UCLA}</p>
+</div>
+<p class="hero-summary">CREST is an open-source system for evaluating model and hardware configurations under their intended runtime schedule. Researchers can vary the workload, target, objective and candidate proposer while reusing evaluation, logging and replay.</p>
+<div aria-label="Publication links" class="hero-buttons">
+<a class="button is-primary is-medium is-rounded" href="https://arxiv.org/abs/2606.15004" rel="noopener" target="_blank"><span aria-hidden="true" class="icon"><i class="fas fa-external-link-alt"></i></span><span>arXiv</span></a>
+<a class="button is-primary is-medium is-rounded" href="https://github.com/nesl/crest" target="_blank">
+<span class="icon"><i class="fab fa-github"></i></span>
+<span>Code</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<nav aria-label="Page navigation" class="navbar is-fixed-top nav-sticky" role="navigation">
+<div class="container">
+<div class="navbar-brand">
+<span class="navbar-item nav-brand">CREST</span>
+</div>
+<div class="navbar-menu is-active">
+<div class="navbar-end">
+<a class="navbar-item" href="#abstract">Abstract</a><a class="navbar-item" href="#capabilities">What CREST Does</a><a class="navbar-item" href="#system">System</a>
+<a class="navbar-item" href="#motivation">Energy for Periodic Sensing</a>
+<a class="navbar-item" href="#hil">HIL Setup</a>
+<a class="navbar-item" href="#results">Case Studies</a>
 
-          <div class="hero-meta">
-            <p class="is-size-5">Joseph Q. Zales, Pragya Sharma, Mani Srivastava {UCLA}</p>
-          </div>
-          <p class="hero-summary">
-            CREST is an open-source full search-and-measurement workflow for MCU sensing systems. Across OxIOD and UrbanSound8K case studies on Cortex-M boards, measured HIL search cuts odometry energy by 41.7% versus FLOPs-based selection, exposes memory-infeasible proxy choices, and shows that runtime schedule and board choice can change which architecture should be deployed.
-          </p>
+</div>
+</div>
+</div>
+</nav>
+<section class="section hero is-light" id="abstract">
+<div class="container is-max-desktop">
+<div class="columns is-centered has-text-centered">
+<div class="column is-four-fifths">
+<h2 class="title is-3">Abstract</h2>
+<div class="content has-text-justified"><p>Selecting an energy-efficient model for periodic sensing requires accounting for time between inferences. Hardware-aware model search typically measures inference alone, even when the application cares about energy per release. We present CREST (Cross-platform Runtime Evaluation and Search Tool), an open-source hardware-in-the-loop experimentation system that evaluates model and hardware configurations under a specified release schedule. Researchers can vary the objective, schedule, target and candidate proposer while reusing evaluation and replay. Records preserve comparison conditions and separate valid measurements from deployable candidates. Three case studies demonstrate the system. First, searches and controlled replay on STM32 N657 show how waiting changes model and clock selection. For one architecture, continuous inference favors 800 MHz over 300 MHz at 8.0 versus 17.1 mJ per inference, but additional waiting offsets 97% of this saving in a fitted decomposition. With STOP between releases, 300 MHz uses about 0.3-0.4% less board energy per release at 100 and 500 ms. At a fixed clock, the preferred architecture changes between release periods, which a model with shared waiting parameters cannot produce. Latency predicts continuous energy within a median 1.7% on held-out observations, yet most release-energy error remains in scheduled terms. In paired replay, one of six randomly selected near-latency pairs reverses its continuous-energy order by 5.8 mJ per release. Second, replay on three Arduino targets shows proxy-selected inertial-odometry candidates can fail to fit or use more energy than measured selections, with only 9 of 16 FLOPs-selected candidates fitting the most memory-constrained board. Third, an audio classification study reuses the evaluator with LLM-based candidate proposers, and cross-target replay moves a selected configuration from third to last in energy rank.</p></div>
+</div>
+</div>
+</div>
+</section><section class="section section-tint" id="capabilities">
+<div class="container is-max-desktop">
+<div class="section-heading has-text-centered">
+<h2 class="title is-3">What CREST Does</h2>
+<p class="subtitle is-5">Vary deployment choices while reusing evaluation, measurement records and replay.</p>
+</div>
+<div class="capability-grid">
+<article class="capability-card"><h3>Configure a study</h3><p>Select proxy or measured objectives, float32 or int8 quantization, and scalar or Pareto policies. Backend-supported options such as CPU clock can be part of the candidate configuration.</p></article>
+<article class="capability-card"><h3>Measure the intended schedule</h3><p>Continuous execution reports energy per inference. Periodic execution reports energy per release, including inference and the following sleep or waiting interval.</p></article>
+<article class="capability-card"><h3>Check deployment constraints</h3><p>Target backends compile, program and evaluate candidates. Measurement validity is recorded separately from memory, latency and deadline feasibility.</p></article>
+<article class="capability-card"><h3>Replay selected configurations</h3><p>Reevaluate candidates on another target or schedule without repeating the search or training. Records keep source quality separate from destination hardware measurements.</p></article>
+<article class="capability-card"><h3>Change the candidate proposer</h3><p>Optuna-native samplers and LLM proposal policies use the same evaluator. Proposed configurations receive the same deployment checks, scoring and measurement records.</p></article>
+<article class="capability-card"><h3>Extend the system</h3><p>Dataset, task, model-family and target-backend interfaces allow researchers to add workloads and deployment paths while retaining the surrounding evaluation and logging code.</p></article>
+</div>
+</div>
+</section><section class="section" id="system">
+<div class="container is-max-desktop">
+<div class="section-heading has-text-centered">
+<h2 class="title is-3">System Overview</h2>
+<p class="subtitle is-5">Candidate proposal, workload evaluation and target measurement use replaceable interfaces.</p>
+</div>
+<div class="content system-copy"><p>A study configuration selects the workload, model family, target backend, schedule, quantization, scoring policy and candidate proposer. TPE, NSGA-II or an LLM proposer supplies candidates to Optuna-managed trials. Workload modules prepare data and build models. Target backends compile, program and measure candidates. The policy converts returned metrics into objectives and feasibility decisions.</p></div>
+<figure class="paper-figure figure-wide">
+<div class="figure-scroll">
+<img alt="CREST study configuration selects a candidate proposer, dataset, task, model family and target backend. Shared orchestration connects Optuna trials, logging and HIL measurements to an objective policy." decoding="async" loading="lazy" src="static/images/crest-stack.png"/>
+</div>
+<figcaption>Replaceable proposers, workload modules and target backends share evaluation, logging and policy feedback.</figcaption>
+</figure>
+<div class="content system-copy system-workflow-copy"><p>Each measurement record identifies the interval, validity, deployment feasibility and provenance of its values. A valid energy measurement can remain available even when a candidate misses its deadline. Replay evaluates selected configurations without repeating the search or training, keeping source quality separate from destination hardware measurements.</p></div>
+</div>
+</section>
+<section class="section" id="motivation">
+<div class="container is-max-desktop">
+<div class="section-heading has-text-centered">
+<h2 class="title is-3">Energy for Periodic Sensing</h2>
+<p class="subtitle is-5">The runtime schedule defines the energy objective.</p>
+</div>
+<div class="columns is-vcentered is-variable is-6">
+<div class="column is-5">
+<div class="content"><p>An application requests a prediction every specified period. A candidate must finish inference within that period, and the board can sleep or wait for the remaining time.</p><p>Continuous inference repeats without an intentional waiting interval and reports energy per inference. Periodic inference releases one prediction per period and reports energy per release, including inference and the following sleep or waiting interval.</p><p>A faster candidate leaves more time for waiting. Its inference-energy saving must offset that additional waiting cost to retain its advantage per release. CREST measures both modes so researchers can check whether a choice remains preferable under the intended schedule.</p></div>
+</div>
+<div class="column is-7">
+<figure class="paper-figure">
+<div class="figure-scroll">
+<img alt="Continuous inference repeats without an intentional waiting interval. Periodic inference releases one prediction per period and includes the following sleep or wait in the measured window." loading="eager" src="static/images/crest-runtime-modes.png"/>
+</div>
+<figcaption>Continuous execution measures energy per inference. Periodic execution measures the complete release interval, including inference and waiting.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-tint" id="hil">
+<div class="container is-max-desktop">
+<div class="columns is-vcentered is-variable is-6">
+<div class="column is-5">
+<div class="section-heading has-text-centered">
+<h2 class="title is-3">HIL Measurement Setup</h2>
+</div>
+<div class="content"><p>A separate harness MCU reads an INA228 monitor while observing DUT GPIO markers. The markers delimit the measurement window, and accumulated energy is normalized per invocation or release. Coordinated measurements are accepted only when DUT timing, harness completion and run counts agree.</p><p>Measurements cover inference and waiting at the development-board USB supply. They include components powered through that input and exclude sensor acquisition, feature extraction and communication. Substantial power remains during sleep, so energy rankings depend on the deployment’s power boundary.</p></div>
+</div>
+<div class="column is-7">
+<figure class="paper-figure">
+<div class="figure-scroll">
+<img alt="CREST HIL power-measurement setup with a DUT powered through an INA228 monitor and a separate BLE33 harness observing GPIO markers." decoding="async" loading="lazy" src="static/images/crest-hil-setup.png"/>
+</div>
+<figcaption>The DUT is powered through an INA228 monitor. A separate harness reads power telemetry over I2C and observes GPIO markers.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="results"><div class="container results-container">
+<div class="section-heading has-text-centered"><h2 class="title is-3">Case Studies</h2><p class="subtitle is-5">Two sensing workloads across three Arm Cortex-M development boards.</p></div>
+<div aria-label="CREST case studies" class="result-tabs" role="tablist">
+<button aria-controls="result-schedule" aria-selected="true" class="result-tab is-active" data-tab-target="result-schedule" id="tab-schedule" role="tab" type="button"><span class="case-tab-index">CS1</span><span class="case-tab-title">Runtime schedules</span></button>
+<button aria-controls="result-proxy" aria-selected="false" class="result-tab" data-tab-target="result-proxy" id="tab-proxy" role="tab" type="button"><span class="case-tab-index">CS2</span><span class="case-tab-title">Proxy selections</span></button>
+<button aria-controls="result-audio" aria-selected="false" class="result-tab" data-tab-target="result-audio" id="tab-audio" role="tab" type="button"><span class="case-tab-index">CS3</span><span class="case-tab-title">Workloads and proposers</span></button>
+</div>
+<div class="result-panels">
+<article aria-labelledby="tab-schedule" class="result-panel case-panel is-active" id="result-schedule" role="tabpanel" tabindex="0">
+<div class="case-summary"><p class="case-label">Case study 1</p><h3>Inference savings do not always transfer to periodic execution</h3><p>Six searches on STM32 N657 compare continuous-energy and periodic-energy selection at 100, 200 and 500 ms. Controlled replay shows that waiting can change the preferred clock and architecture.</p><p>For one architecture, continuous execution favors 800 MHz over 300 MHz at 8.01 versus 17.06 mJ per inference. Additional waiting offsets 97% of this saving in a fitted decomposition. With STOP between releases, 300 MHz uses about 0.3–0.4% less energy per release. At 300 MHz, two architectures also reverse their energy ordering between 100 and 500 ms.</p></div>
+<div class="case-evidence"><div class="finding-card"><span>What CREST enables</span><p>Latency predicts continuous energy well, but most release-energy error remains in scheduled terms. Calibrated estimates can guide selection, while scheduled replay checks differences they miss.</p></div></div>
+<figure class="paper-figure case-figure"><div class="figure-scroll case-figure-frame"><img alt="Release-energy differences at 100 and 500 ms show that the preferred architecture at 300 MHz changes with the period. Both lines are relative to trial 203 at 800 MHz." loading="lazy" src="static/images/crest-result-schedule.png"/></div><figcaption>Negative values favor 300 MHz over trial 203 at 800 MHz. Points show means and paired 95% intervals. Lines connect measured endpoints.</figcaption></figure>
+</article>
+<article aria-labelledby="tab-proxy" class="result-panel case-panel" id="result-proxy" role="tabpanel" tabindex="0">
+<div class="case-summary"><p class="case-label">Case study 2</p><h3>Target measurements change proxy-selected tradeoffs</h3><p>CREST compares FLOPs, memory-traffic and measured-energy objectives for OxIOD inertial odometry using the same TCN architecture and float or int8 search space. Proxy-selected candidates are replayed on Nano 33 BLE Sense and the Portenta H7 M4 and M7 cores.</p><p>Only nine of 16 FLOPs-selected candidates deploy on BLE33. Among valid replay-front points, the median nearest-RMSE energy gap across the three targets is 14.8% for FLOPs and 38.4% for memory traffic. Some proxy-replay points also dominate measured-search points, so target measurements establish which tradeoffs are available.</p></div>
+<div class="case-evidence"><div class="finding-card"><span>What CREST enables</span><p>Take candidates selected under different objectives through common deployment checks and measurements, preserving their source validation quality.</p></div><div class="metric-grid"><div class="metric-card"><strong>9 / 16</strong><span>FLOPs-selected candidates successfully deploy on BLE33.</span></div><div class="metric-card"><strong>13 / 26</strong><span>FLOPs replay-front points are dominated by measured-energy candidates.</span></div></div></div>
+<figure class="paper-figure case-figure"><div class="figure-scroll case-figure-frame"><img alt="Proxy replay and measured-energy fronts on three Arduino configurations, followed by a separate STM32 search over models and CPU clocks." loading="lazy" src="static/images/crest-result-proxy.png"/></div><figcaption>The first three panels compare proxy replay with measured-energy search. The STM32 panel is a separate architecture-and-clock search. Lower energy and RMSE are better. Filled markers meet the 200 ms latency threshold.</figcaption></figure>
+</article>
+<article aria-labelledby="tab-audio" class="result-panel case-panel" id="result-audio" role="tabpanel" tabindex="0">
+<div class="case-summary"><p class="case-label">Case study 3</p><h3>Reuse the evaluator across workloads and candidate proposers</h3><p>UrbanSound8K audio classification replaces OxIOD and TCNs with prepared log-mel features and a DS-CNN family. TPE and two LLM proposal policies use the same application score and deployment checks. Each of six searches reaches 200 feasible trials.</p><p>On Portenta, History selects validation macro-F1 of 0.761 at 61.7 mJ per inference, compared with TPE’s 0.760 at 152.5 mJ. Replaying all six selections changes their energy ordering. The Portenta TPE selection ranks third by energy on Portenta and last on STM32. These results demonstrate evaluator reuse and target-dependent choices, rather than general proposer superiority.</p></div>
+<div class="case-evidence"><div class="finding-card"><span>What CREST enables</span><p>Change the workload and proposer while retaining the evaluator, then replay the selected configurations to check whether their energy ordering transfers to another target.</p></div></div>
+<figure class="paper-figure case-figure"><div class="figure-scroll case-figure-frame"><img alt="Audio quality and energy for TPE, Memory and History on Portenta and STM32. Stars mark each strategy's score-selected configuration." loading="lazy" src="static/images/crest-result-audio-selection.png"/></div><figcaption>Each strategy contributes 200 feasible trials, including repeated configurations. Stars mark the highest application score. The 400 mJ line is a scoring scale, not a feasibility cutoff.</figcaption></figure>
+</article>
+</div>
+</div></section><section class="section section-tint" id="conclusion"><div class="container is-max-desktop"><div class="section-heading has-text-centered"><h2 class="title is-3">Conclusion</h2></div><div class="content"><p>Selecting a configuration for periodic inference requires accounting for the energy consumed after inference finishes. CREST provides reusable evaluation and replay across workloads, targets and candidate proposers. The studies show that schedules can change model and clock choices, while target replay checks whether selected configurations fit and retain their energy advantage.</p></div></div></section>
 
-          <div class="hero-buttons" aria-label="Publication links">
-            <a href="static/pdfs/crest_sensys_2027_draft.pdf" target="_blank" class="button is-primary is-medium is-rounded">
-                <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                <span>Paper</span>
-            </a>
-            <a href="https://github.com/nesl/crest" target="_blank" class="button is-primary is-medium is-rounded">
-                <span class="icon"><i class="fab fa-github"></i></span>
-                <span>Code</span>
-            </a>
-            <button class="button is-primary is-medium is-rounded inactive-button" type="button" aria-disabled="true" title="arXiv link will be added when available">
-                <span class="icon"><i class="ai ai-arxiv"></i></span>
-                <span>arXiv</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <nav class="navbar is-fixed-top nav-sticky" role="navigation" aria-label="Page navigation">
-      <div class="container">
-        <div class="navbar-brand">
-          <span class="navbar-item nav-brand">CREST</span>
-        </div>
-        <div class="navbar-menu is-active">
-          <div class="navbar-end">
-        <a class="navbar-item" href="#abstract">Abstract</a>
-        <a class="navbar-item" href="#motivation">Motivation</a>
-        <a class="navbar-item" href="#capabilities">What CREST Does</a>
-        <a class="navbar-item" href="#positioning">Positioning</a>
-        <a class="navbar-item" href="#system">System</a>
-        <a class="navbar-item" href="#hil">HIL Setup</a>
-        <a class="navbar-item" href="#results">Case Studies</a>
-        <a class="navbar-item" href="#artifact">Artifact</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <section class="section hero is-light" id="abstract">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Abstract</h2>
-            <div class="content has-text-justified">
-              <p>Deploying neural networks on low-power microcontrollers (MCUs) requires selecting model architectures under tight memory, latency, and energy constraints. Existing workflows often simplify this process along one or more axes: static proxy costs such as FLOPs or parameters, treating one MCU as representative, and continuous-inference tests instead of deployed sensing schedules. These assumptions can mis-rank Pareto-front candidates, miss infeasible deployments, and obscure schedule-dependent energy.</p>
-              <p>We present CREST (Cross-platform Runtime Evaluation and Search Tool), a deployment-realistic hardware-in-the-loop (HIL) neural architecture search (NAS) framework for MCU sensing systems. CREST keeps the optimizer, HIL measurement boundary, logging, and replay workflow fixed while exposing workload, model family, target backend, schedule, quantization, and scoring policy as configurable axes. This makes deployment effects experimentally separable within one reusable workflow.</p>
-              <p>We evaluate CREST on inertial odometry and audio classification across three Arm Cortex-M targets. For inertial odometry, measured-energy HIL search reduces median per-inference energy by 41.7% versus FLOPs-based selection and 40.8% versus memory-traffic-based selection at similar error. FLOPs-based selection also chooses infeasible deployments on memory-constrained targets. On the STM32 N657 target, continuous-inference and duty-cycled searches produce different Pareto frontiers. For audio classification, the same application-level policy selects different DS-CNN architectures on different boards, and cross-board replay changes deployment cost substantially.</p>
-              <p>Overall, CREST shows that deployment-realistic MCU NAS must jointly optimize model architecture, target platform, runtime schedule, and deployment policy rather than relying only on static proxy costs or continuous-inference measurements.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="motivation">
-      <div class="container is-max-desktop">
-        <div class="section-heading has-text-centered">
-          <h2 class="title is-3">Motivation</h2>
-          <p class="subtitle is-5">Runtime schedule can change which architecture should be selected.</p>
-        </div>
-
-        <div class="columns is-vcentered is-variable is-6">
-          <div class="column is-5">
-            <div class="content">
-              <p>
-                Current hardware-aware model-selection workflows often simplify deployment by using proxy costs, treating one measured platform as representative, or measuring continuous inference instead of deployed sensing schedules.
-              </p>
-              <p>
-                CREST exposes those deployment axes directly. In the STM32 N657 example, Architecture A uses less energy than Architecture B under continuous inference, but more energy when measured over the full 200 ms cadenced board-level window, including inference and the following wait or sleep interval.
-              </p>
-              <p>
-                The reversal matters because sensing latency is an active-time and deadline constraint, while deployment energy is integrated over the whole release window. A benchmark-style continuous-inference measurement can therefore select the wrong model for a duty-cycled sensing deployment.
-              </p>
-            </div>
-          </div>
-          <div class="column is-7">
-            <figure class="paper-figure">
-              <div class="figure-scroll">
-                <img src="static/images/crest-motivation.png" alt="Model architecture latency and energy on STM32 N657 under continuous and 200 ms cadenced execution. Highlighted architectures reverse their energy ordering across runtime schedules." loading="eager">
-              </div>
-              <figcaption>Model architecture latency and energy on STM32 N657 under continuous and 200 ms cadenced execution. The highlighted architectures reverse their energy ordering across runtime schedules.</figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-tint" id="capabilities">
-      <div class="container is-max-desktop">
-        <div class="section-heading has-text-centered">
-          <h2 class="title is-3">What CREST Does</h2>
-          <p class="subtitle is-5">CREST keeps the search loop, HIL boundary, replay path, and common metric fields fixed while deployment choices vary.</p>
-        </div>
-
-        <div class="capability-grid">
-          <article class="capability-card">
-            <h3>Configurable studies</h3>
-            <p>Users select workload, model family, target backend, runtime schedule, quantization mode, and policy in a study configuration.</p>
-          </article>
-          <article class="capability-card">
-            <h3>Normalized HIL metrics</h3>
-            <p>Trials return task quality, proxy cost, memory, latency, energy, status, and backend-dependent cadence telemetry when available.</p>
-          </article>
-          <article class="capability-card">
-            <h3>Runtime modes</h3>
-            <p>CREST supports continuous inference and cadenced sensing-window execution as search-time choices.</p>
-          </article>
-          <article class="capability-card">
-            <h3>Replay</h3>
-            <p>Replay reconstructs candidates from study logs and remeasures selected fronts across targets, schedules, and policies.</p>
-          </article>
-          <article class="capability-card">
-            <h3>Scalar and Pareto policies</h3>
-            <p>Policies use the same metric namespace for scalar scoring, Pareto exploration, pruning, and feasibility constraints.</p>
-          </article>
-          <article class="capability-card">
-            <h3>Built-in scope</h3>
-            <p>CREST includes OxIOD TCN odometry, UrbanSound8K DS-CNN audio, float32/int8 PTQ, Nano 33 BLE Sense, Portenta H7 CM4/CM7, and STM32 N657 paths.</p>
-          </article>
-        </div>
-        <div class="content capability-note">
-          <p>
-            For a new study, a user changes the workload, model family, backend, runtime schedule, quantization mode, or scoring policy while the optimizer, HIL boundary, normalized logs, and replay path stay fixed. Logs keep successful measurements, pruned candidates, feasibility decisions, and failures in one schema, making replay and cross-study comparison auditable.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="positioning">
-      <div class="container is-max-desktop">
-        <div class="section-heading has-text-centered">
-          <h2 class="title is-3">Positioning</h2>
-          <p class="subtitle is-5">CREST turns deployment assumptions into configurable experimental axes.</p>
-        </div>
-
-        <div class="content">
-          <p>
-            CREST is a full search-and-measurement workflow for hardware-in-the-loop NAS, built to vary workload, model family, target backend, runtime schedule, quantization, and scoring policy while keeping the optimizer, measurement boundary, logs, and replay workflow fixed. That fixed path makes deployment effects experimentally separable, so differences in selected architectures can be attributed to the deployment variable being tested rather than to a rewritten pipeline.
-          </p>
-        </div>
-        <div class="positioning-table-wrap">
-          <table class="positioning-table">
-            <thead>
-              <tr>
-                <th>Related direction</th>
-                <th>Typical limitation for deployment studies</th>
-                <th>What CREST adds</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td data-label="Related direction">Proxy and predictor NAS</td>
-                <td data-label="Typical limitation">Search uses operation counts, memory estimates, lookup tables, or calibrated predictors instead of measuring each deployment candidate.</td>
-                <td data-label="What CREST adds">HIL trials can report whether candidates build, fit, meet timing constraints, and consume energy on the selected board and schedule when supported by the backend and harness.</td>
-              </tr>
-              <tr>
-                <td data-label="Related direction">HIL NAS systems</td>
-                <td data-label="Typical limitation">Target interaction is valuable, but workload, target stack, runtime schedule, or measurement scope are often fixed design choices.</td>
-                <td data-label="What CREST adds">Workload, model family, backend, schedule, quantization, and policy are selected through one reusable workflow.</td>
-              </tr>
-              <tr>
-                <td data-label="Related direction">Embedded ML benchmarks</td>
-                <td data-label="Typical limitation">Benchmarks characterize models and hardware, but do not directly feed deployment-specific measurements into architecture selection.</td>
-                <td data-label="What CREST adds">Measured hardware metrics become optimizer feedback and replay evidence for controlled model-selection comparisons.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="full-comparison-block">
-          <h3>Selected Capability Comparison</h3>
-          <p>
-            This excerpt highlights the closest neural NAS, product, benchmarking, and estimator comparisons for CREST. The full table, including additional related systems, is available in the paper.
-          </p>
-          <p>
-            The table uses the paper's capability definitions. Measured targets means more than one real hardware target. HIL metrics means measured hardware metrics used during search or selection. Extensible tasks/targets means adding modules through reusable interfaces rather than rewriting a vertical pipeline. Yes marks a central capability in the reviewed artifact. Partial marks limited or indirect support.
-          </p>
-          <div class="full-comparison-wrap">
-            <table class="full-comparison-table">
-              <thead>
-                <tr>
-                  <th>Work</th>
-                  <th>Artifact type</th>
-                  <th>Target scope</th>
-                  <th>Availability</th>
-                  <th>Automated search</th>
-                  <th>Measured targets</th>
-                  <th>Proxy metrics</th>
-                  <th>HIL metrics</th>
-                  <th>Extensible tasks/targets</th>
-                  <th>Schedule options</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="crest-row">
-                  <td>CREST</td>
-                  <td>Full tool</td>
-                  <td>Multi-vendor MCUs</td>
-                  <td>Open source</td>
-                  <td><span class="capability-yes">Yes</span></td>
-                  <td><span class="capability-yes">Yes</span></td>
-                  <td><span class="capability-yes">Yes</span></td>
-                  <td><span class="capability-yes">Yes</span></td>
-                  <td><span class="capability-yes">Yes</span></td>
-                  <td><span class="capability-yes">Yes</span></td>
-                </tr>
-                <tr>
-                  <td>TinyOdom 2022</td>
-                  <td>Full tool</td>
-                  <td>STM32 family</td>
-                  <td>Open source</td>
-                  <td><span class="capability-yes">Yes</span></td>
-                  <td><span class="capability-yes">Yes</span></td>
-                  <td><span class="capability-yes">Yes</span></td>
-                  <td><span class="capability-yes">Yes</span></td>
-                  <td><span class="capability-no">No</span></td>
-                  <td><span class="capability-no">No</span></td>
-                </tr>
-                <tr>
-                  <td>Edge Impulse 2023</td>
-                  <td>Product</td>
-                  <td>MCU + CPU</td>
-                  <td>Product</td>
-                  <td><span class="capability-partial">Partial</span></td>
-                  <td><span class="capability-yes">Yes</span></td>
-                  <td><span class="capability-yes">Yes</span></td>
-                  <td><span class="capability-no">No</span></td>
-                  <td><span class="capability-yes">Yes</span></td>
-                  <td><span class="capability-no">No</span></td>
-                </tr>
-                <tr>
-                  <td>MicroNAS 2025</td>
-                  <td>Search stage</td>
-                  <td>STM32 family</td>
-                  <td>Available on request</td>
-                  <td><span class="capability-yes">Yes</span></td>
-                  <td><span class="capability-partial">Partial</span></td>
-                  <td><span class="capability-yes">Yes</span></td>
-                  <td><span class="capability-no">No</span></td>
-                  <td><span class="capability-no">No</span></td>
-                  <td><span class="capability-no">No</span></td>
-                </tr>
-                <tr>
-                  <td>EdgeMark 2025</td>
-                  <td>Benchmark</td>
-                  <td>Multi-vendor MCUs</td>
-                  <td>Open source</td>
-                  <td><span class="capability-no">No</span></td>
-                  <td><span class="capability-partial">Partial</span></td>
-                  <td><span class="capability-no">No</span></td>
-                  <td><span class="capability-no">No</span></td>
-                  <td><span class="capability-no">No</span></td>
-                  <td><span class="capability-no">No</span></td>
-                </tr>
-                <tr>
-                  <td>InstMeter 2026</td>
-                  <td>Estimator</td>
-                  <td>Multi-vendor MCUs</td>
-                  <td>No public artifact found</td>
-                  <td><span class="capability-no">No</span></td>
-                  <td><span class="capability-yes">Yes</span></td>
-                  <td><span class="capability-no">No</span></td>
-                  <td><span class="capability-no">No</span></td>
-                  <td><span class="capability-no">No</span></td>
-                  <td><span class="capability-no">No</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="system">
-      <div class="container is-max-desktop">
-        <div class="section-heading has-text-centered">
-          <h2 class="title is-3">System Overview</h2>
-          <p class="subtitle is-5">A study configuration selects the workload, model family, target backend, runtime mode, quantization mode, and scoring policy.</p>
-        </div>
-
-        <div class="content system-copy">
-          <p>
-            CREST is laid out around swappable interfaces rather than one vertical workload pipeline. A study configuration selects the dataset, task, model-family, target-backend, runtime, quantization, and scoring components for one experiment.
-          </p>
-          <p>
-            Dataset, task, and model-family modules own the workload side of the study. The target-backend module owns vendor-specific compilation, flashing, telemetry, and power measurement. The orchestration layer connects those modules to NAS, HIL measurement, trial logging, normalized metrics, and the objective policy.
-          </p>
-          <p>
-            Policies decide whether a trial can stop after host metrics, proxy costs, resource reports, or pruning decisions, or whether it must cross the HIL boundary for compiled, flashed, measured feedback from the selected target.
-          </p>
-        </div>
-        <figure class="paper-figure figure-wide">
-          <div class="figure-scroll">
-            <img src="static/images/crest-stack.png" alt="CREST stack diagram showing YAML study configuration, dataset, task, model-family, target-backend interfaces, orchestration layer, normalized metrics, and objective policy." loading="lazy" decoding="async">
-          </div>
-          <figcaption>CREST framework structure. A study configuration selects the workload, model family, target backend, runtime mode, quantization mode, and scoring policy. The orchestration layer composes the selected interfaces, requests HIL measurements when needed, logs normalized metrics, and returns scores and feasibility feedback to the optimizer.</figcaption>
-        </figure>
-        <div class="content system-copy system-workflow-copy">
-          <p>
-            At runtime, those pieces form a sample-evaluate-score loop. Optuna proposes a candidate, CREST builds and evaluates it, the backend measures it when HIL data are needed, and the policy returns task and deployment feedback to the optimizer.
-          </p>
-          <p>
-            Trial logs keep successful measurements, pruned candidates, feasibility decisions, and failures in the same metric schema. Replay reconstructs selected candidates from those logs and remeasures them across targets, schedules, and policies without retraining or rewriting the search pipeline.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-tint" id="hil">
-      <div class="container is-max-desktop">
-        <div class="columns is-vcentered is-variable is-6">
-          <div class="column is-5">
-            <div class="section-heading has-text-centered">
-              <h2 class="title is-3">HIL Measurement Setup</h2>
-            </div>
-            <div class="content">
-              <p>
-                CREST records board-level DUT supply energy by powering the device under test through an off-the-shelf INA228 monitor. A separate harness MCU reads power telemetry over I2C while observing DUT GPIO markers.
-              </p>
-              <p>
-                GPIO markers define the measurement window, attaching each energy value to a specific candidate, runtime schedule, and trial outcome without manual trace segmentation.
-              </p>
-              <p>
-                The reported setup uses a 15 milliohm shunt and 64-sample averaging. The harness resets the INA228 energy accumulator at the start marker, reads accumulated energy at the end marker, normalizes by completed invocations, and accepts coordinated DUT-plus-harness trials only when DUT timing, harness completion, and run counts agree.
-              </p>
-            </div>
-          </div>
-          <div class="column is-7">
-            <figure class="paper-figure">
-              <div class="figure-scroll">
-                <img src="static/images/crest-hil-setup.png" alt="CREST HIL power-measurement setup with a DUT powered through an INA228 monitor and a separate BLE33 harness observing GPIO markers." loading="lazy" decoding="async">
-              </div>
-              <figcaption>CREST HIL power-measurement setup. The DUT is powered through an INA228 monitor, and a separate harness MCU reads power telemetry over I2C while observing the DUT's GPIO markers.</figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="results">
-      <div class="container results-container">
-        <div class="section-heading has-text-centered">
-          <h2 class="title is-3">Case Studies</h2>
-          <p class="subtitle is-5">CREST exposes model-selection differences hidden by proxy-only, single-target, and single-schedule workflows.</p>
-        </div>
-
-        <div class="result-tabs" role="tablist" aria-label="CREST case studies">
-          <button class="result-tab is-active" role="tab" aria-selected="true" aria-controls="result-proxy" id="tab-proxy" data-tab-target="result-proxy" type="button">
-            <span class="case-tab-index">CS1</span>
-            <span class="case-tab-title">Proxy Costs</span>
-          </button>
-          <button class="result-tab" role="tab" aria-selected="false" aria-controls="result-schedule" id="tab-schedule" data-tab-target="result-schedule" type="button">
-            <span class="case-tab-index">CS2</span>
-            <span class="case-tab-title">Runtime Schedule</span>
-          </button>
-          <button class="result-tab" role="tab" aria-selected="false" aria-controls="result-audio" id="tab-audio" data-tab-target="result-audio" type="button">
-            <span class="case-tab-index">CS3</span>
-            <span class="case-tab-title">Audio Policy</span>
-          </button>
-        </div>
-
-        <div class="result-panels">
-          <article class="result-panel case-panel is-active" id="result-proxy" role="tabpanel" aria-labelledby="tab-proxy">
-            <div class="case-summary">
-              <p class="case-label">Case Study 1</p>
-              <h3>Measured-energy HIL search finds lower-energy odometry fronts than static proxy search.</h3>
-              <p>
-                Case Study 1 holds the workload fixed to OxIOD inertial odometry and the model family fixed to TCN architectures, then changes the selection policy and target backend. CREST compares FLOPs-proxy and memory-traffic-proxy NAS runs against measured-energy HIL NAS on Nano 33 BLE Sense, Portenta H7 CM4, Portenta H7 CM7, and STM32 N657.
-              </p>
-              <p>
-                The replay view matters because candidates selected by cheap static objectives are compiled, measured, and compared against the measured-energy front on each target. This separates model quality from whether the cost signal actually ranks deployable MCU candidates correctly.
-              </p>
-            </div>
-            <div class="case-evidence">
-              <div class="finding-card">
-                <span>Key Finding</span>
-                <p>Static proxies miss deployment reality in two ways. FLOPs can select candidates that are invalid on memory-constrained targets, and even the valid proxy fronts are mostly beaten after measured HIL replay.</p>
-              </div>
-              <div class="metric-grid">
-                <div class="metric-card">
-                  <strong>15 / 23</strong>
-                  <span>FLOPs-selected BLE33 candidates rejected by SRAM and flash limits.</span>
-                </div>
-                <div class="metric-card">
-                  <strong>41.7%</strong>
-                  <span>median energy reduction versus FLOPs-proxy selection at nearest-front RMSE.</span>
-                </div>
-                <div class="metric-card">
-                  <strong>40.8%</strong>
-                  <span>median energy reduction versus memory-traffic-proxy selection.</span>
-                </div>
-                <div class="metric-card">
-                  <strong>49 / 55</strong>
-                  <span>FLOPs-proxy replay-front points dominated by measured-energy NAS.</span>
-                </div>
-              </div>
-            </div>
-            <figure class="paper-figure case-figure">
-              <div class="figure-scroll case-figure-frame">
-                <img src="static/images/crest-result-proxy.png" alt="Static-proxy Pareto replay versus measured-energy NAS fronts for BLE33, Portenta M4, Portenta M7, and STM32 N657." loading="lazy" decoding="async">
-              </div>
-              <figcaption>Static-proxy Pareto replay versus measured-energy NAS fronts. Each panel shows one target. The orange dashed front replays the FLOPs-proxy Pareto candidates on that target. The green dash-dot front replays the memory-traffic-proxy Pareto candidates. The solid blue front shows the target's measured-energy NAS front. The x-axis is measured energy per inference on a log scale and the y-axis is aggregate RMSE, where lower is better. Filled markers meet the 200 ms latency threshold.</figcaption>
-            </figure>
-          </article>
-
-          <article class="result-panel case-panel" id="result-schedule" role="tabpanel" aria-labelledby="tab-schedule">
-            <div class="case-summary">
-              <p class="case-label">Case Study 2</p>
-              <h3>Continuous-inference selection does not transfer cleanly to cadenced deployment.</h3>
-              <p>
-                Case Study 2 keeps the STM32 N657 backend, OxIOD task, TCN model family, search space, and HIL path fixed while changing only the runtime schedule and objective. The continuous run optimizes per-inference energy, while the cadenced run uses a representative 200 ms sensing period and optimizes energy over the full scheduled window.
-              </p>
-              <p>
-                CREST then replays each selected frontier under the other runtime. This tests whether benchmark-style continuous inference is a reliable stand-in for a duty-cycled deployment where the board executes inference, waits or sleeps, and reports deadline and window-energy telemetry.
-              </p>
-            </div>
-            <div class="case-evidence">
-              <div class="finding-card">
-                <span>Key Finding</span>
-                <p>Changing from active-inference measurement to a 200 ms cadenced sensing window changes which models are Pareto-optimal. The runtime schedule is a model-selection input, not just a reporting choice.</p>
-              </div>
-              <div class="metric-grid">
-                <div class="metric-card">
-                  <strong>9 / 9</strong>
-                  <span>continuous replay-front points are dominated under cadenced measurement.</span>
-                </div>
-                <div class="metric-card">
-                  <strong>3.6 mJ</strong>
-                  <span>median per-window saving for native cadenced selection at nearest-front RMSE, a 2.1% reduction.</span>
-                </div>
-              <div class="metric-card">
-                <strong>44.1%</strong>
-                  <span>active-energy reduction under continuous replay of the cadenced-selected front at nearest-front RMSE.</span>
-              </div>
-              </div>
-            </div>
-            <figure class="paper-figure case-figure">
-              <div class="figure-scroll case-figure-frame">
-                <img src="static/images/crest-result-schedule.png" alt="CS2 cross-runtime Pareto comparison for STM32 and OxIOD under continuous-inference energy and cadenced energy per window." loading="lazy" decoding="async">
-              </div>
-              <figcaption>CS2 cross-runtime Pareto comparison for STM32/OxIOD. The left panel evaluates both selected sets under continuous-inference energy per inference. The right evaluates both under cadenced energy per window. Solid lines are native NAS fronts, and dashed lines are replays.</figcaption>
-            </figure>
-          </article>
-
-          <article class="result-panel case-panel" id="result-audio" role="tabpanel" aria-labelledby="tab-audio">
-            <div class="case-summary">
-              <p class="case-label">Case Study 3</p>
-              <h3>The same application-level score selects different DS-CNN architectures on different boards.</h3>
-              <p>
-                Case Study 3 switches workload, task metric, model family, target backend, and selection policy. CREST runs prepared-feature UrbanSound8K audio classification with a DS-CNN search space and a scalar application score that trades validation macro-F1 against measured inference energy.
-              </p>
-              <p>
-                The example policy classifies one prepared log-mel feature window every 2 seconds during a 72 hour session and allocates 400 mJ of the window to classifier inference. The budget and penalty are policy choices, so CREST can rescore completed trials and replay selected models across boards without rebuilding the search pipeline.
-              </p>
-            </div>
-            <div class="case-evidence">
-              <div class="finding-card">
-                <span>Key Finding</span>
-                <p>A deployment policy selects different prepared-feature audio models for Portenta and STM32. Maximizing validation F1 alone leaves substantial measured energy on the table, and the chosen architecture does not transfer for free across boards.</p>
-              </div>
-              <div class="metric-grid">
-                <div class="metric-card">
-                  <strong>~78%</strong>
-                  <span>energy reduction versus max-F1 candidates on both measured boards.</span>
-                </div>
-                <div class="metric-card">
-                  <strong>152.5 mJ</strong>
-                  <span>Portenta selected-model energy at 0.760 macro-F1, down from 701.9 mJ for the 0.812 max-F1 candidate.</span>
-                </div>
-                <div class="metric-card">
-                  <strong>49.3 mJ</strong>
-                  <span>STM32 selected-model energy at 0.776 macro-F1, down from 228.5 mJ for the 0.781 max-F1 candidate.</span>
-                </div>
-                <div class="metric-card">
-                  <strong>4.1x</strong>
-                  <span>energy increase when the STM32-selected model is replayed on Portenta.</span>
-                </div>
-              </div>
-            </div>
-            <div class="case-figure-grid">
-                <figure class="paper-figure case-figure">
-                  <div class="figure-scroll case-figure-frame">
-                    <img src="static/images/crest-result-audio-selection.png" alt="CS3 score-based UrbanSound8K DS-CNN selection on Portenta H7 CM7 and STM32 N657." loading="lazy" decoding="async">
-                  </div>
-                  <figcaption>CS3 score-based prepared-feature UrbanSound8K DS-CNN selection on two backends. Each point is a feasible scored trial, plotted by validation macro-F1 and HIL-measured active inference energy. The dashed line marks the 400 mJ classifier allocation used in the score.</figcaption>
-                </figure>
-                <figure class="paper-figure case-figure">
-                  <div class="figure-scroll case-figure-frame">
-                    <img src="static/images/crest-result-cross-board.png" alt="CS3 cross-board replay of score-selected audio model architectures showing energy and latency on native and replay backends." loading="lazy" decoding="async">
-                  </div>
-                  <figcaption>CS3 cross-board replay of score-selected audio model architectures. Each row is one selected DS-CNN, with source validation macro-F1 fixed in the row label. Filled endpoints are native measurements, open endpoints are replays on the opposite backend.</figcaption>
-                </figure>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-tint" id="artifact">
-      <div class="container is-max-desktop">
-        <div class="section-heading has-text-centered">
-          <h2 class="title is-3">Artifact</h2>
-        </div>
-        <div class="content">
-          <p>
-            CREST includes study configurations, workload/model modules, backend integrations, HIL logging, and replay support for OxIOD inertial odometry and UrbanSound8K prepared-feature audio classification. The evaluated backends cover Arduino Nano 33 BLE Sense, Arduino Portenta H7 CM4/CM7, and STM32 N657.
-          </p>
-          <p>
-            Start without hardware by running training-only and proxy studies, then inspect logs or rescore completed trials. With supported boards, replay selected candidates and collect target-specific latency, memory, and feasibility results. Full measured-energy HIL NAS requires the target boards, vendor toolchains, and CREST's INA228-based harness because energy is collected from real devices under the selected runtime schedule.
-          </p>
-          <p>
-            Full HIL NAS runs in the paper take about 17-35 hours per board. That cost is why CREST keeps the optimizer, measurement boundary, logging format, and replay path fixed across studies that vary only the intended deployment axis.
-          </p>
-          <p>
-            Good extension projects include adding a new sensing workload, integrating another MCU backend, testing a different duty cycle, or training predictors from CREST's HIL logs to reduce future search cost.
-          </p>
-          <p>
-            The public code repository: <a href="https://github.com/nesl/crest" target="_blank">https://github.com/nesl/crest</a>.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!--
-      UNUSED TEMPLATE BLOCKS KEPT FOR LATER
-      Re-enable only after real CREST assets exist.
-      - teaser video
-      - image carousel
-      - YouTube video
-      - video carousel
-      - poster iframe
-      - supplementary material button
-      - More Works dropdown
-    -->
-
-    <!--
-      BibTeX TODO
-      Add the final accepted-paper BibTeX after venue, DOI, ACM URL, arXiv URL,
-      and public citation metadata are approved.
-    -->
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
-            <p>
+</main>
+<footer class="footer">
+<div class="container">
+<div class="columns is-centered">
+<div class="column is-8">
+<div class="content">
+<p>
               This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-              You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br/> This website is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license" target="_blank">Creative
               Commons Attribution-ShareAlike 4.0 International License</a>.
             </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script>
+</div>
+</div>
+</div>
+<div class="nesl-footer has-text-centered"><hr/><p class="has-text-centered">© 2026 Networked &amp; Embedded Systems Laboratory, UCLA<br/><a href="https://nesl.github.io/">NESL</a> · <a href="https://www.ucla.edu/">UCLA</a></p></div></div>
+</footer>
+<script>
     (function () {
       document.body.classList.add('tabs-enabled');
       const tabs = Array.from(document.querySelectorAll('.result-tab'));

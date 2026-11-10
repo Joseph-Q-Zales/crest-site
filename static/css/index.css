@@ -1471,3 +1471,32 @@ a:focus {
     gap: 0.65rem;
   }
 }
+
+/* Supporting tables for the revised case studies. */
+.crest-page .data-table-wrap { overflow-x: auto; margin: 1.5rem auto 0; max-width: 940px; }
+.crest-page .data-table { border-collapse: collapse; width: 100%; background: white; font-size: .93rem; }
+.crest-page .data-table caption { text-align: left; font-weight: 700; padding: .75rem 0; color: #263346; }
+.crest-page .data-table th, .crest-page .data-table td { padding: .9rem 1rem; text-align: left; border-bottom: 1px solid #dbe7f7; vertical-align: top; }
+.crest-page .data-table thead { background: #eef6ff; }
+.crest-page .data-table strong { color: #1f5f8f; }
+.crest-page .table-note { font-size: .86rem; color: #64748b; max-width: 940px; margin: .6rem auto 1.5rem; }
+.crest-page summary:focus-visible, .crest-page button:focus-visible { outline: 3px solid #2774ae; outline-offset: 4px; }
+
+@media (max-width: 768px) {
+  .crest-page .data-table { min-width: 620px; }
+  .crest-page #motivation .figure-scroll img { width: 100%; max-width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero, .section { animation: none; }
+}
+
+/* Compact publication links at every viewport size. */
+.crest-page .hero-buttons { gap: 0.75rem; }
+.crest-page .hero-buttons .button {
+  min-width: 0;
+  width: auto;
+  height: 2.25rem;
+  padding: 0.45rem 1rem !important;
+  font-size: 0.9rem !important;
+}
